@@ -55,7 +55,7 @@
 
       - name: Copy self signed key
         copy:
-          src: files/rootCA.key
+          src: files/apache.key
           dest: /etc/pki/tls/private/apache-selfsigned.key
           owner: root
           group: root
