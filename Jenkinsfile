@@ -30,10 +30,14 @@ pipeline {
             steps {
                 sh 'docker run -p 80:2100 -p 443:2200 apache:1.0'
             }
-        stage("Test")
+        stage("Test - SSL")
             steps { 
-
+                sh 'docker exec apache:1.0 | openssl s_client -showcerts -connect https://<hostname>'
             }
+        stage("Test - Port")
+            steps {
+                // Curl will return non 0 if connection fails
+                  sh 'docker exec docker exec apache:1.0 | curl <hostname>:443'
         stage("Push")
             steps {
                 sh 'echo $DOCKERHUB_PASS | docker login -u $dockerhub_user --password stdin'
