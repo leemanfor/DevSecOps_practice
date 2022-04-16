@@ -1,9 +1,17 @@
 <ol>
  <h1> Ansible_apache - 5 STIGs below. </h1> 
 	<ol>
-   <li> The Apache web server application directories, libraries, and configuration files must only be accessible to privileged users. </li>
+   <li> The Apache web server must generate a session ID using as much of the character set as possible to reduce the risk of brute force. </li>
 		
+		LoadModule unique_id_module modules/mod_unique_id.so
+   
    <li> The Apache web server must have Web Distributed Authoring (WebDAV) disabled.</li>
+		
+		Not present
+		dav_module
+		dav_fs_module
+		dav_lock_module
+		
    <li>	The Apache web server must be configured to use a specified IP address and port.</li>
    <li> The Apache web server must limit the number of allowed simultaneous session requests.</li>
 		
