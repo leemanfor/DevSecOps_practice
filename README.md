@@ -31,4 +31,8 @@
 		 MaxKeepAliveRequests 100
 				
    <li> The Apache web server must prohibit or restrict the use of nonsecure or unnecessary ports, protocols, modules, and/or services.</li>
-	</ol>
+	
+		Listen 192.168.99.100:80
+		Listen 192.168.99.100:443
+	
+
