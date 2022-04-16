@@ -1,3 +1,3 @@
 # DevSecOps_practice
-<li> Docker_apache </li>
-<li> Jenkins_apache </li>
+ 
+Each portion of the 3 tests are in separate branches. 
