@@ -2,8 +2,21 @@
  <h1> Ansible_apache - 5 STIGs below. </h1> 
 	<ol>
    <li> The Apache web server application directories, libraries, and configuration files must only be accessible to privileged users. </li>
+		
    <li> The Apache web server must have Web Distributed Authoring (WebDAV) disabled.</li>
    <li>	The Apache web server must be configured to use a specified IP address and port.</li>
    <li> The Apache web server must limit the number of allowed simultaneous session requests.</li>
+		
+		# KeepAlive: Enable/disable persistent connections
+		  KeepAlive On
+
+		# KeepAliveTimeout: Number of seconds to wait for the next request from the
+		# same client on the same connection. Default is 5 seconds
+		  KeepAliveTimeout 15
+
+		# MaxKeepAliveRequests: How many requests to allow during a persistent connection. 
+		# You can set it 0 for unlimited requests, but it is not recommended.
+		 MaxKeepAliveRequests 100
+				
    <li> The Apache web server must prohibit or restrict the use of nonsecure or unnecessary ports, protocols, modules, and/or services.</li>
 	</ol>
