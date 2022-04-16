@@ -13,6 +13,10 @@
 		dav_lock_module
 		
    <li>	The Apache web server must be configured to use a specified IP address and port.</li>
+		
+		Listen 192.168.99.100:80
+		Listen 192.168.99.100:443
+		
    <li> The Apache web server must limit the number of allowed simultaneous session requests.</li>
 		
 		# KeepAlive: Enable/disable persistent connections
