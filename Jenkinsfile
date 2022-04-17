@@ -40,25 +40,5 @@ pipeline {
                 sh 'echo $DOCKERHUB_PASS | docker login -u $dockerhub_user --password stdin'
                 sh 'docker push kharnden/apache:1.0'
             }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      }
 }
