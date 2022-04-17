@@ -12,10 +12,7 @@ pipeline {
 
         // Disable concurrent jobs from running
         disableConcurentBuilds()
-    }
-    triggers {
-        cron('H/60 * * * *')
-    }
+
     environment {
         // Set Dockerhub login credentials using a variable passed through into Jenkins using Credential manager.
         DOCKERHUB_LOGIN=credentials('dockerhub-kharnden')
