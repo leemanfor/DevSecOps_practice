@@ -34,7 +34,7 @@ pipeline {
         stage("Test - Port")
             steps {
                 // Curl will return non 0 if connection fails
-                  sh 'docker exec docker exec apache:1.0 | curl <hostname>:443'
+                  sh 'docker exec apache:1.0 | curl <hostname>:443'
         stage("Push")
             steps {
                 sh 'echo $DOCKERHUB_PASS | docker login -u $dockerhub_user --password stdin'
